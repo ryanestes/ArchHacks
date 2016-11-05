@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "599938740065",
+    "firebase_url": "https://medilert-ea030.firebaseio.com",
+    "project_id": "medilert-ea030",
+    "storage_bucket": "medilert-ea030.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599938740065:android:f1605c154565626d",
+        "android_client_info": {
+          "package_name": "ryanestes.medilert"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599938740065-2nbgfpho0cruan10j0insces632us6og.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ryanestes.medilert",
+            "certificate_hash": "6DFCAB7C0AB9540DEF35B61480C2F6EA7E70045A"
+          }
+        },
+        {
+          "client_id": "599938740065-02tkhf8pfb5a5gvbfa1k14hn4c8b57ef.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfVn527HNRtDmnBhyBkV2idv7coErMAL4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599938740065-02tkhf8pfb5a5gvbfa1k14hn4c8b57ef.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
