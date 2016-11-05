@@ -1,7 +1,6 @@
 package ryanestes.medilert;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,25 +9,61 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
-    public class UserActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
-        //Intent intent = new Intent();
-        //Bundle bundle = getIntent().getExtras();
-        //Uri uri = intent.getParcelableExtra("imageUri");
+import static ryanestes.medilert.R.id.help_btn;
+import static ryanestes.medilert.R.id.progressBar;
 
-        @Override
+
+public class UserActivity extends AppCompatActivity {
+
+        @BindView(R.id.med_details)TextView mMedText;
+        @BindView(R.id.phoneNumber) TextView mPhoneNum;
+        @BindView(R.id.email) TextView mEmail;
+    @BindView(R.id.address) TextView mAddress;
+    @BindView(help_btn) Button mHelpBtn;
+
+    @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_user);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
+            ButterKnife.bind(this);
 
-            FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        mHelpBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(UserActivity.this,HelpActivity.class));
+            }
+        });
+
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                    mAddress.setClickable(true);
+                    mAddress.setFocusable(true);
+                    mAddress.setFocusableInTouchMode(true);
+                    mAddress.setCursorVisible(true);
+                    mPhoneNum.setClickable(true);
+                    mPhoneNum.setFocusable(true);
+                    mPhoneNum.setFocusableInTouchMode(true);
+                    mPhoneNum.setCursorVisible(true);
+                    mEmail.setClickable(true);
+                    mEmail.setFocusable(true);
+                    mEmail.setFocusableInTouchMode(true);
+                    mEmail.setCursorVisible(true);
+                    mMedText.setClickable(true);
+                    mMedText.setFocusable(true);
+                    mMedText.setFocusableInTouchMode(true);
+                    mMedText.setCursorVisible(true);
+                    Snackbar.make(view, "Categories can now be edited!", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
             });
@@ -55,4 +90,5 @@ import android.view.MenuItem;
 
             return super.onOptionsItemSelected(item);
         }
+
     }

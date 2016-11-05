@@ -31,9 +31,13 @@
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
     <string name="prompt_password">Enter Password</string>
     <string name="signed_in_fmt">Signed in as: %s</string>
-    <string name="medications">Medications</string>
+    <string name="medications">Medications and Allergens</string>
     <string name="medication_details">Medication_details</string>
     <string name="address">514 Cougar Village Apt 1C, Edwardsville, IL 62025</string>
     <string name="name">Ryan Estes</string>
     <string name="send_help">SEND HELP</string>
+    <string name="home">Home</string>
+    <string name="email_address">restes93@gmail.com</string>
+    <string name="phone_num">(217)381–2597</string>
+    <string name="title_activity_help">Map</string>
 </resources>
