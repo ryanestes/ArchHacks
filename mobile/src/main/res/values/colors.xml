@@ -12,4 +12,5 @@
     <color name="input_register_bg">#3b4148</color>
     <color name="input_register_hint">#5e6266</color>
     <color name="lbl_name">#333333</color>
+    <color name="black">#000000</color>
 </resources>

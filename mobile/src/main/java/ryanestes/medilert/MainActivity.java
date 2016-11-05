@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -105,12 +104,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(this, UserActivity.class);
 
             Bundle bundle = new Bundle();
-            bundle.putString("imageUri", personPhoto.toString());
-            bundle.putString(“name”, personName);
-            bundle.putString(“gName”, personGivenName);
-            bundle.putString(“fName”, personFamilyName);
-            bundle.putString(“email”, personEmail);
-            bundle.putString(“id”, personId);
+            intent.putExtra("imageUri", personPhoto);
+            bundle.putString(acct.getDisplayName(), personName);
+            bundle.putString(acct.getGivenName(), personGivenName);
+            bundle.putString(acct.getFamilyName(), personFamilyName);
+            bundle.putString(acct.getEmail(), personEmail);
+            bundle.putString(acct.getId(), personId);
             intent.putExtras(bundle);
             startActivity(intent);
 
