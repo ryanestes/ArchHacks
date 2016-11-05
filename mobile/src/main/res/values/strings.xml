@@ -40,4 +40,7 @@
     <string name="email_address">restes93@gmail.com</string>
     <string name="phone_num">(217)381–2597</string>
     <string name="title_activity_help">Map</string>
+    <string name="location_permission_denied">Permission to access location has been denied</string>
+    <string name="permission_required_toast">Permission is required to access your location</string>
+    <string name="permission_rationale_location">We have liable cause to access location with your permission</string>
 </resources>
