@@ -2,10 +2,15 @@ package ryanestes.medilert;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.support.wearable.view.WatchViewStub;
+import android.util.Log;
 import android.widget.TextView;
+
+import com.google.android.gms.wearable.MessageEvent;
+import com.google.android.gms.wearable.WearableListenerService;
 
 import java.util.List;
 
@@ -34,7 +39,7 @@ public class MainActivity extends Activity {
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
-                "Imitation Game\nScientist");
+                "What That\nMouth do?");
         startActivityForResult(intent,
                 SPEECH_RECOGNIZER_REQUEST_CODE);
     }
@@ -48,13 +53,10 @@ public class MainActivity extends Activity {
                         data.getStringArrayListExtra
                                 (RecognizerIntent.EXTRA_RESULTS);
                 String spokenText = results.get(0);
-                startActivity();
-                if (spokenText.toUpperCase().indexOf("ALAN TURING") > -1)
-                    mTextView.setText("Correct!\nIt is Alan Turing.");
-                else
-                    mTextView.setText("Incorrect!\nIt is Alan Turing.");
+                mTextView.setText(spokenText);
+
             }
+            super.onActivityResult(requestCode, resultCode, data);
         }
-        super.onActivityResult(requestCode, resultCode, data);
     }
 }
